@@ -8,6 +8,7 @@ class Rectangle:
     """ Rectangle """
 
     number_of_instances = 0
+    print_symbol = '#'
 
     def __init__(self, width=0, height=0):
         """ initialize """
@@ -22,7 +23,7 @@ class Rectangle:
         ret = ''
         for i in range(self.__height):
             for j in range(self.__width):
-                ret += '#'
+                ret += str(self.print_symbol)
             ret += '\n'
         return ret[:-1]
 
