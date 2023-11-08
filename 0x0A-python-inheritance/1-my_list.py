@@ -1,16 +1,18 @@
 #!/usr/bin/python3
-""" Module that returns a list of available
-    attributes and methods of an object:
+"""
+Contains a class MyList that inherits from list builtin
 """
 
 
-def lookup(obj):
-    """Returns the list of available attributes
-    and methods of an object
-    Args:
-        obj(obj) - the object to check
-    Returns:
-        list: list of every attributes and methods
-    """
+class MyList(list):
+    """Inherits from the list class"""
 
-    return dir(obj)
+    def __init__(self):
+        """Initializes the object
+        """
+        super().__init__()
+
+    def print_sorted(self):
+        """Prints the sorted list
+        """
+        print(sorted(self))
